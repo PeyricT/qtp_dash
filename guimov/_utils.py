@@ -14,7 +14,7 @@ class Tools:
     """
     def __init__(self):
         # Dash main object
-        self.app = dash.Dash('qtp')
+        self.app = dash.Dash(__name__)
         self.genome = None
         self.proteome = None
 
