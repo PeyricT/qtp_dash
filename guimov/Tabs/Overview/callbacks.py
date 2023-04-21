@@ -13,9 +13,10 @@ from guimov._utils import tools as tl
 @tl.app.callback(
     Output('text_genome', 'children'),
     Input('upload_genome', 'contents'),
+    State('upload_genome', 'filename'),
     prevent_initial_call=True,
 )
-def load_genome(content):
+def load_genome(content,filename):
     if content is None:
         raise PreventUpdate
     
@@ -27,7 +28,7 @@ def load_genome(content):
     return html.Div([
         html.H4(('Metadata'), style={'text-decoration': 'underline'}),
         html.Table([
-            html.Tr([html.Th('Name'),html.Td('Rienpourlemoment')]),
+            html.Tr([html.Th('Name'),html.Td(filename)]),
             html.Tr([html.Th('Genes'),html.Td(tl.genome.shape[0])]),
             html.Tr([html.Th('Colomns'),html.Td(tl.genome.shape[1])])
         ]),

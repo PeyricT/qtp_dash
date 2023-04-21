@@ -14,44 +14,68 @@ th, td {
     font-weight:bold
     }
 
+#over{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+
 #title{
 color: green;
 text-align: center;
 width: 100%;
 }
 
+#upload{
+    width: 100%;
+    color: purple;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#text{
+    width: 100%;
+    color:blue;
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
 #upload_genome{
     color:blue;
     width: 50%;
     text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-#text_genome{
-    width: 50%;
-    color:blue;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    border-collapse:collapse;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 #upload_proteome{
     color: purple;
     width: 50%;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
+/* #text_genome{
+    width: 50%;
+    color:blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-collapse:collapse;
+} */
+
+/* 
 #text_proteome{
     width: 50%;
     color: purple;
     text-align: center;
     display: flex;
     justify-content: center;
-}
+} */
 
 h2{
     width: 100vw;
