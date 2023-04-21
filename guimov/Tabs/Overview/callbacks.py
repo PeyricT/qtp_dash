@@ -2,6 +2,7 @@ from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import base64
 import io
+from dash import html, dcc
 
 import pandas as pd
 import numpy as np
@@ -21,7 +22,16 @@ def load_genome(content):
     decoded = base64.b64decode(content.split(',')[1])
 
     tl.genome = pd.read_csv(io.StringIO(decoded.decode('UTF-8')), index_col=None, header=0, sep='\t', decimal=',', engine='python')
-    return f"{tl.genome.shape[0]} genes with {tl.genome.shape[1]} columns"
+    # file=io.StringIO(decoded.decode('UTF-8'))
+    # file_name=file.read()
+    return html.Div([
+        html.H4(('Metadata'), style={'text-decoration': 'underline'}),
+        html.Table([
+            html.Tr([html.Th('Name'),html.Td('Rienpourlemoment')]),
+            html.Tr([html.Th('Genes'),html.Td(tl.genome.shape[0])]),
+            html.Tr([html.Th('Colomns'),html.Td(tl.genome.shape[1])])
+        ]),
+    ])
 
 @tl.app.callback(
     Output('text_proteome', 'children'),
@@ -34,5 +44,15 @@ def load_proteome(content):
     
     decoded = base64.b64decode(content.split(',')[1])
     tl.proteome = pd.read_csv(io.StringIO(decoded.decode('UTF-8')), index_col=None, header=0, sep='\t', decimal=',', engine='python')
-    return f"{tl.proteome.shape[0]} proteins with {tl.proteome.shape[1]} columns"
+    print(tl.proteome)
+    return html.Div([
+        html.H4(('Metadata'), style={'text-decoration': 'underline'}),
+        html.Table([
+            html.Tr([html.Th('Name'),html.Td('Rienpourlemoment')]),
+            html.Tr([html.Th('Proteins'),html.Td(tl.proteome.shape[0])]),
+            html.Tr([html.Th('Colomns'),html.Td(tl.proteome.shape[1])]),
+            html.Tr([html.Th('Mean coverage'),html.Td((tl.proteome['Coverage [%]'].mean()),"%")])
+        ])
+    ])
+
 

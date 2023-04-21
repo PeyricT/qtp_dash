@@ -1,7 +1,58 @@
-.text{
-    color:darkred;
-}
-
 a{
     color:orange;
+    text-decoration: underline;
+}
+
+th, td {
+    border:1px solid black;
+    width:20%;
+    }
+   td {
+    text-align:center;
+    }
+   caption {
+    font-weight:bold
+    }
+
+#title{
+color: green;
+text-align: center;
+width: 100%;
+}
+
+#upload_genome{
+    color:blue;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#text_genome{
+    width: 50%;
+    color:blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-collapse:collapse;
+}
+
+#upload_proteome{
+    color: purple;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#text_proteome{
+    width: 50%;
+    color: purple;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    width: 100vw;
 }
