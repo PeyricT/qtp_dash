@@ -6,30 +6,48 @@ a{
 th, td {
     border:1px solid black;
     width:20%;
-    }
-   td {
-    text-align:center;
-    }
-   caption {
-    font-weight:bold
-    }
+}
 
-#over{
+td {
+text-align:center;
+}
+
+caption {
+font-weight:bold
+}
+
+h2{
+    width: 100vw;
+}
+table{
+    border-collapse: collapse;
+}
+
+
+/* Class des Layout */
+.over{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap:wrap
 }
 
+.volcano_plot{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+
+
+/* Dans la partie Overview */
 #title{
-color: green;
 text-align: center;
 width: 100%;
 }
 
 #upload{
     width: 100%;
-    color: purple;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -38,45 +56,40 @@ width: 100%;
 
 #text{
     width: 100%;
-    color:blue;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
 }
 
 #upload_genome{
-    color:blue;
     width: 50%;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
 }
 
 #upload_proteome{
-    color: purple;
     width: 50%;
     text-align: center;
-    /* justify-content: center; */
 }
 
-/* #text_genome{
+#text_genome{
     width: 50%;
-    color:blue;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    border-collapse:collapse;
-} */
+}
 
-/* 
 #text_proteome{
     width: 50%;
-    color: purple;
     text-align: center;
-    display: flex;
-    justify-content: center;
-} */
+}
 
-h2{
-    width: 100vw;
+
+/* Dans la partie Volcano Plots */
+#gen{
+    width: 50%;
+    text-align: left;
+}
+
+#prot{
+    width: 50%;
+    text-align: left;
 }

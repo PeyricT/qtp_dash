@@ -15,7 +15,6 @@ upload_genome = dcc.Upload(
         'Genome drag and drop or ',
         html.A('Select File'),
     ]),
-    style={'display':'flex'}
 )
 
 upload_proteome = dcc.Upload(
@@ -26,19 +25,16 @@ upload_proteome = dcc.Upload(
         'Proteome drag and drop or ',
         html.A('Select File'),
     ]),
-    style={'display':'flex'}
 )
 
 text_genome = html.Div(
     id="text_genome",
     className='text',
-    style={'display':'flex'}
 )
 
 text_proteome = html.Div(
     id="text_proteome",
     className='text',
-    style={'display':'flex'}
 )
 
 # tabGen = html.Table(

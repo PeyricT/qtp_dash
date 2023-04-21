@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 from guimov._utils import tools as tl
 
 
-tab_title = html.H2('Genomics')
+tab_title_gen = html.H2('Genomics')
 
 graph_genomics = dcc.Graph(
     id='graph_genomics',
@@ -23,6 +23,30 @@ dropdown_genomics_y = dcc.Dropdown(
 
 table_genomics = dash_table.DataTable(
     id = 'table_genomics',
+    page_size=5,
+    sort_action="native",
+    sort_mode="multi",
+)
+
+
+tab_title_prot = html.H2('Proteomics')
+
+graph_proteomics = dcc.Graph(
+    id='graph_proteomics',
+)
+
+dropdown_proteomics_x = dcc.Dropdown(
+        id='dropdown_proteomics_x',
+        placeholder='X axis',
+)
+
+dropdown_proteomics_y = dcc.Dropdown(
+        id='dropdown_proteomics_y',
+        placeholder='Y axis',
+)
+
+table_proteomics = dash_table.DataTable(
+    id = 'table_proteomics',
     page_size=5,
     sort_action="native",
     sort_mode="multi",

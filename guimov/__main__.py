@@ -9,7 +9,7 @@ from .Tabs.Multiomics.page import layout as mu_layout
 
 from .Tabs.Overview.callbacks import *
 from .Tabs.Genomics.callbacks import *
-from .Tabs.Proteomics.callbacks import *
+#from .Tabs.Proteomics.callbacks import *
 from .Tabs.Multiomics.callbacks import *
 
 def start(*args, **kwargs):
@@ -30,6 +30,7 @@ def start(*args, **kwargs):
             html.Div(
                 'QTP dev',
                 className='guimov_H1',
+                style={'font-size': 30, 'text-align': 'center'}
             ),
             dcc.Tabs(
                 # className="guimov_tabs",
@@ -38,8 +39,8 @@ def start(*args, **kwargs):
                 value='Overview_tab',
                 children=[
                     dcc.Tab(id='Overview_tab', label='Overview', value='Overview_tab', children=ov_layout),
-                    dcc.Tab(id='Genomics_tab', label='Genomics', value='Genomics_tab', children=ge_layout),
-                    dcc.Tab(id='Proteomics_tab', label='Proteomics', value='Proteomics_tab', children=pr_layout),
+                    dcc.Tab(id='Genomics_tab', label='Volcano Plots', value='Genomics_tab', children=ge_layout),
+                    #dcc.Tab(id='Proteomics_tab', label='Proteomics', value='Proteomics_tab', children=pr_layout),
                     dcc.Tab(id='Multiomics_tab', label='Multiomics', value='Multiomics_tab', children=mu_layout),
                 ],
                 vertical=False,

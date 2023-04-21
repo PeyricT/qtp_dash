@@ -37,9 +37,10 @@ def load_genome(content,filename):
 @tl.app.callback(
     Output('text_proteome', 'children'),
     Input('upload_proteome', 'contents'),
+    State('upload_proteome','filename'),
     prevent_initial_call=True,
 )
-def load_proteome(content):
+def load_proteome(content,filename):
     if content is None:
         raise PreventUpdate
     
@@ -49,7 +50,7 @@ def load_proteome(content):
     return html.Div([
         html.H4(('Metadata'), style={'text-decoration': 'underline'}),
         html.Table([
-            html.Tr([html.Th('Name'),html.Td('Rienpourlemoment')]),
+            html.Tr([html.Th('Name'),html.Td(filename)]),
             html.Tr([html.Th('Proteins'),html.Td(tl.proteome.shape[0])]),
             html.Tr([html.Th('Colomns'),html.Td(tl.proteome.shape[1])]),
             html.Tr([html.Th('Mean coverage'),html.Td((tl.proteome['Coverage [%]'].mean()),"%")])

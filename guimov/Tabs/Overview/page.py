@@ -2,7 +2,7 @@ from .elements import *
 
 
 layout = html.Div(
-    id='over',
+    className='over',
     children=[
         tab_title,
         html.Div(
@@ -18,5 +18,4 @@ layout = html.Div(
             text_proteome
         ])
     ],
-    style={'display':'flex', 'flex-direction': 'row', 'justify-content': 'space-between','flex-wrap':'wrap'}
 )

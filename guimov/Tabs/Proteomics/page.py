@@ -2,7 +2,7 @@ from .elements import *
 
 
 layout = html.Div(
-    # className="",
+    className="plot",
     children=[
         tab_title,
         dropdown_proteomics_x,
