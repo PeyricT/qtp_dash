@@ -17,6 +17,7 @@ class Tools:
         self.app = dash.Dash(__name__)
         self.genome = None
         self.proteome = None
+        self.multi = None
 
     def start_app(self, *args, **kwargs):
         self.app.run_server(*args, debug=True, **kwargs)

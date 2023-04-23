@@ -4,12 +4,12 @@ import logging
 
 from .Tabs.Overview.page import layout as ov_layout
 from .Tabs.Genomics.page import layout as ge_layout
-from .Tabs.Proteomics.page import layout as pr_layout
+# from .Tabs.Proteomics.page import layout as pr_layout
 from .Tabs.Multiomics.page import layout as mu_layout
 
 from .Tabs.Overview.callbacks import *
 from .Tabs.Genomics.callbacks import *
-from .Tabs.Proteomics.callbacks import *
+# from .Tabs.Proteomics.callbacks import *
 from .Tabs.Multiomics.callbacks import *
 
 def start(*args, **kwargs):
@@ -28,7 +28,7 @@ def start(*args, **kwargs):
         # className="guimov_main",
         children=[
             html.Div(
-                'QTP dev',
+                'QTP Template',
                 className='guimov_H1',
             ),
             dcc.Tabs(
@@ -39,7 +39,7 @@ def start(*args, **kwargs):
                 children=[
                     dcc.Tab(id='Overview_tab', label='Overview', value='Overview_tab', children=ov_layout),
                     dcc.Tab(id='Genomics_tab', label='Genomics', value='Genomics_tab', children=ge_layout),
-                    dcc.Tab(id='Proteomics_tab', label='Proteomics', value='Proteomics_tab', children=pr_layout),
+                    # dcc.Tab(id='Proteomics_tab', label='Proteomics', value='Proteomics_tab', children=pr_layout),
                     dcc.Tab(id='Multiomics_tab', label='Multiomics', value='Multiomics_tab', children=mu_layout),
                 ],
                 vertical=False,

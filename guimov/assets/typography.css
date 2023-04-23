@@ -1,7 +1,101 @@
-.text{
-    color:darkred;
+a{
+    color:orange;
+    text-decoration: underline;
 }
 
-a{
-    color:blue;
+th, td {
+    border:1px solid black;
+    width:20%;
+}
+
+td {
+text-align:center;
+}
+
+caption {
+font-weight:bold
+}
+
+h2{
+    width: 100vw;
+}
+table{
+    border-collapse: collapse;
+}
+
+.guimov_H1{
+    font-size : 2.5em;
+    margin-bottom: 10px;
+    text-align : center;
+}
+
+/* Class des Layout */
+
+.over{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+
+.volcano_plot{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap
+}
+
+
+/* Dans la partie Overview */
+#title{
+text-align: center;
+width: 100%;
+}
+
+#upload{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#text{
+    width: 100%;
+    text-align: center;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+#upload_genome{
+    width: 50%;
+    text-align: center;
+}
+
+#upload_proteome{
+    width: 50%;
+    text-align: center;
+}
+
+#text_genome{
+    width: 50%;
+    text-align: center;
+}
+
+#text_proteome{
+    width: 50%;
+    text-align: center;
+}
+
+
+/* Dans la partie Volcano Plots */
+#gen{
+    width: 50%;
+    text-align: left;
+}
+
+#prot{
+    width: 50%;
+    text-align: left;
 }

@@ -2,12 +2,22 @@ from .elements import *
 
 
 layout = html.Div(
-    # className=None,
+    className='over',
     children=[
         tab_title,
-        upload_genome,
-        upload_proteome,
-        text_genome,
-        text_proteome,
+        html.Div(
+            id='upload',
+            children=[
+                upload_genome,
+                upload_proteome
+            ]
+        ),
+        html.Div(
+            id='text',
+            children=[
+                text_genome,
+                text_proteome
+            ]
+        ),
     ],
 )
