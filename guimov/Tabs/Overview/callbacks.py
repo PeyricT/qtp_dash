@@ -36,3 +36,15 @@ def load_proteome(content):
     tl.proteome = pd.read_csv(io.StringIO(decoded.decode('UTF-8')), index_col=None, header=0, sep='\t', decimal=',', engine='python')
     return f"{tl.proteome.shape[0]} proteins with {tl.proteome.shape[1]} columns"
 
+@tl.app.callback(
+    Output('venn_diagram','figure'),
+    Input('text_proteome','children'),
+    Input('text_genome','children'),
+    prevent_intial_call=True,
+)
+def venn_figure(group_A,group_B):
+    if tl.genome is None or tl.proteome is None:
+        raise PreventUpdate
+    print(type(set(tl.genome["gene_id"])))
+    print(type(set(tl.proteome["protein_id"])))
+    return tl.venn_to_plotly([set(tl.genome["gene_id"]),set(tl.proteome["protein_id"])])

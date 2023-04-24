@@ -1,7 +1,11 @@
-.text{
-    color:darkred;
+body{
+    background-color: green;
 }
 
-a{
+.text{
+    color:blue;
+}
+
+.up{
     color:blue;
 }

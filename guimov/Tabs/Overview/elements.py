@@ -33,3 +33,7 @@ text_proteome = html.Div(
     id="text_proteome",
     className='text',
 )
+
+venn_diagram = dcc.Graph(
+    id="venn_diagram"
+)

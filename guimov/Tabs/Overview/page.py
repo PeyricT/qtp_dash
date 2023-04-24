@@ -9,5 +9,6 @@ layout = html.Div(
         upload_proteome,
         text_genome,
         text_proteome,
+        venn_diagram
     ],
 )
