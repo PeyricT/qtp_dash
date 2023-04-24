@@ -45,6 +45,14 @@ table{
     flex-wrap:wrap
 }
 
+.VennHide{
+    display: none;
+}
+
+.VennShow{
+    margin: auto;
+}
+
 
 /* Dans la partie Overview */
 #title{

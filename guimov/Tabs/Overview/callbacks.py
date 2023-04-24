@@ -55,3 +55,19 @@ def load_proteome(content,filename):
             html.Tr([html.Th('Mean coverage'),html.Td((tl.proteome['Coverage [%]'].mean()),"%")])
         ])
     ])
+
+@tl.app.callback(
+    Output('venn_diagram','figure'),
+    Output('venn_diagram','className'),
+    Input('text_proteome','children'),
+    Input('text_genome','children'),
+    prevent_intial_call=True,
+)
+def venn_figure(group_A,group_B):
+    if tl.genome is None or tl.proteome is None:
+        raise PreventUpdate
+    
+    return tl.venn_to_plotly(
+        [set(tl.genome["gene_id"]),set(tl.proteome["protein_id"])],
+        L_labels=['Genes', 'Proteins']
+    ), "VennShow"

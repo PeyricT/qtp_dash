@@ -19,5 +19,6 @@ layout = html.Div(
                 text_proteome
             ]
         ),
+        venn_diagram,
     ],
 )
