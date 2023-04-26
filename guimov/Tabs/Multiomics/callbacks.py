@@ -35,7 +35,7 @@ def set_dropdrown_options(*_):
     gen_temp = gen_temp[~gen_temp.index.duplicated(keep='first')]
     prot_temp = prot_temp[~prot_temp.index.duplicated(keep='first')]
 
-    index = set(gen_temp.index).intersection(set(prot_temp.index))
+    index = list(set(gen_temp.index).intersection(set(prot_temp.index)))
     tl.multi = pd.DataFrame([], index=index)
     
     for col in ['gene_name', *dgf, *dgp]:
