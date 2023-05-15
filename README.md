@@ -1,15 +1,21 @@
-# QTP_TEMPLATE
+# QTP project
 
-QTP is the new interface to visualize transcriptomics et proteomics data of your project. It allows to load and visualize plots of your transcriptomics and proteomics data. It is possible to get coverage between genes of data and visualize scatter plot fot multiomics comparaison. 
+QTP is the new interface to visualize transcriptomics and proteomics data from your project. It allows to load and visualize your data thanks several different kind of plots. It is also possible to get the coverage between coding protein's genes and proteins thanks a curated database. Some plots for multiomics comparaison allow you to visualize the common data between your dataset.
 
-# Usage
+# QTP Dash
+
+The QTP app project had to many development layers to be accomplish during the project. Especially for the Frontend part, which requiere a deep understanding of typescript, javascript, VUE.js and D3.js. This is the reason why whe choose to develop a demo interface QTP_dash (this repo). QTP_dash in made thanks a python package, already known which allow a quick setup of the plots and an efficient way to handle the provided dataset.
+
+##  Quick start
 
 Clone this repository to your desired directory and install modules of requirements file, with pip install. 
 Run this command and copy the link on Firefox to connect you to QTP.
 
 ```
-python3 start.py
+python start.py
 ```
+
+# Interface description
 
 ## Overview
 You can loaded proteomics and transcriptomics data on the first tab : Overview. Files have to CSV format.
@@ -25,15 +31,17 @@ We advise to select **log10 Y axis**, to have log value for Y axis.
 On the third tab Multiomics, you can display the multiomics volcano plot. You have to choose genomics and proteomics foldchange and pvalue. Points display on the plot and represent all genes in common for desired condition. It is possible to change log(10) of the pvalue.
 
 
-# Development
-At the begining, we don't use this platform but an existing platform which has more complete. For the backend, it was two parts **Services** and **Nest Server** which exchange informations between them. It is developed with Python and TypeScrit and used Flask, Redis Server and Nest. For the fronted, it is developed with JavaScript and TypeScrip and used Vue and D3. We worked with this plateform for five weeks and we decided it is not a good idea to continue with JavaScript. We didn't know this language and we couldn't get a good project's final. 
-We choose Dash which is a Python package for the demo of the frontend. It isn't for production usage but it is a good template to show what is we can do. 
+# QTP App
 
-## Backend
+QTP Dash demo belong the QTP Application, firstly develop with javascript, python and redis. At the contrary of the demo, QTP app was made to handle a huge amount of request and can handle a lot of simultaneous connexion. That is why the project use a lot of heavy package, with a 3 layers architecture made to scale the project to a massive use.
+The 3 differents layers use differents languages packages and each have a specific objective :
 
+## QTP Services
+For the backend, it was two parts **Services** and **Nest Server** which exchange informations between them. It is developed with Python and TypeScrit and used Flask, Redis Server and Nest.
 
+## QTP Nest
 
-## Frontend
+## QTP Front
 The frontend with Dash use CSS and HTML. CSS part is only one file where all classes and id selector are defided whereas HTML part is used by Dash fonction in Python files. 
 The _page.py_ file contain the layout which describes what the platform looks like and is composed of a tree of **components** like ```html.Div``` in our file. 
 And _elements.py_ file contain all the elements of the layout. 
