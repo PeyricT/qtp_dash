@@ -37,11 +37,23 @@ QTP Dash demo belong the QTP Application, firstly develop with javascript, pytho
 The 3 differents layers use differents languages packages and each have a specific objective :
 
 ## QTP Services
-For the backend, it was two parts **Services** and **Nest Server** which exchange informations between them. It is developed with Python and TypeScrit and used Flask, Redis Server and Nest.
+QTP  Services is link to a custum database made with redis. It allow to handle all genes and proteins from genome and proteome in the database. QTP service is a bench of Flask python server made to interact between redis and the Nest Server. 
+
+repos :
+https://github.com/PeyricT/qtp-services
+https://github.com/PeyricT/uniprot_redis
 
 ## QTP Nest
+QTP Nest is a typescript server made with the Nest node js package. It allow to redirect get and post made from the website and link them to the QTP Services. It also use to check the input data and send html/json response. 
+
+repo :
+https://github.com/PeyricT/qtp-controller
 
 ## QTP Front
+
 The frontend with Dash use CSS and HTML. CSS part is only one file where all classes and id selector are defided whereas HTML part is used by Dash fonction in Python files. 
 The _page.py_ file contain the layout which describes what the platform looks like and is composed of a tree of **components** like ```html.Div``` in our file. 
 And _elements.py_ file contain all the elements of the layout. 
+
+repo:
+https://github.com/PeyricT/qtp-front
