@@ -1,6 +1,6 @@
 dash
 pandas
-Plotly
+plotly
 scipy
 matplotlib
 matplotlib_venn
