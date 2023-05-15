@@ -1,10 +1,10 @@
 # QTP project
 
-QTP is the new interface to visualize transcriptomics and proteomics data from your project. It allows to load and visualize your data thanks several different kind of plots. It is also possible to get the coverage between coding protein's genes and proteins thanks a curated database. Some plots for multiomics comparaison allow you to visualize the common data between your dataset.
+QTP is the new interface to visualize transcriptomics and proteomics data from your project. It allows to load and visualize your data thanks several different kind of plots. It is also possible to get the coverage between coding protein genes and proteins thanks a curated database. Some plots for multiomics comparaison allow you to visualize the data in common across your dataset.
 
 # QTP Dash
 
-The QTP app project had to many development layers to be accomplish during the project. Especially for the Frontend part, which requiere a deep understanding of typescript, javascript, VUE.js and D3.js. This is the reason why whe choose to develop a demo interface QTP_dash (this repo). QTP_dash in made thanks a python package, already known which allow a quick setup of the plots and an efficient way to handle the provided dataset.
+The QTP app project had too many development layers to be accomplish during the project. Especially for the Frontend part, which requiere a deep understanding of typescript, javascript, VUE.js and D3.js. This is the reason why whe choose to develop a demo interface QTP_dash (this repo). QTP_dash is made thanks a python package, already known which allow a quick setup of the plots and an efficient way to handle the provided dataset.
 
 ##  Quick start
 
